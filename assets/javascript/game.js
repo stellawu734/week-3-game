@@ -121,6 +121,7 @@ document.onkeyup = function(event) {
 		win++;
 		$("#win").html(win);
 		$("#wordGuessed").empty();
+		wrongGuessArray = [];
 		//new word
 	targetIndex = Math.floor(Math.random()*wordBank.length);
 	targetWord = wordBank[targetIndex];
@@ -146,8 +147,9 @@ document.onkeyup = function(event) {
 		loss++;
 		$("#loss").html(loss);
 		$("#wordGuessed").empty();
+		wrongGuessArray = [];
 		//new word
-		targetIndex = Math.floor(Math.random()*wordBank.length);
+	targetIndex = Math.floor(Math.random()*wordBank.length);
 	targetWord = wordBank[targetIndex];
 	targetWordArray = targetWord.toLowerCase().split("");
 	newArray = new Array(targetWordArray.length)
